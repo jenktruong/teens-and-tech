@@ -42,22 +42,13 @@ library(archive) # for interacting with ZIP files
 
 ```
 
-## R Markdown
+## Exploring the data structure
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r Load CSVs into RStudio}
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+teens_2014_2015 <- read_csv(here("raw_data/September 25-October 9, 2014 and February 10-March 6, 2015 - Teens/September 25-October 9, 2014 and February 10-March 6, 2015 - Teens - CSV.csv"))
 
-```{r cars}
-summary(cars)
+teens_2018 <- read_csv(here("raw_data/March 7-April 10, 2018 - Teens and Tech Survey - CSV.csv"))
+
 ```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+At first glance, these datasets seem very messy. I should visit the original data source to learn more.
