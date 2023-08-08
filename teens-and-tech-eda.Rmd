@@ -59,7 +59,12 @@ teens_2014_2015 <- read_csv(here("raw_data/September 25-October 9, 2014 and Febr
 teens_2018 <- read_csv(here("raw_data/March 7-April 10, 2018 - Teens and Tech Survey - CSV.csv"))
 
 ```
-At first glance, these datasets seem very messy. The 2018 dataset seems a lot cleaner though.
+Dataset | # of Rows | # of Columns
+------- | --------- | ------------
+2014/5  | 1642      | 50
+2018    | 743       | 50
+
+At first glance, these datasets seem very messy. The 2018 dataset seems a lot cleaner though. Even though both datasets have the same number of columns, the columns themselves aren't the same.
 
 - For the 2014-2015 dataset, assume that every column after "xprimelan" is a survey question.
 - For the 2018 dataset, assume every column after "surv_lang"  refers to a survey question.
