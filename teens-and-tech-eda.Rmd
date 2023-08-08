@@ -27,18 +27,26 @@ library(archive) # for interacting with ZIP files
 # This dataset has 5 files
 # The one we want is "September 25-October 9, 2014 and February 10-March 6, 2015 - Teens/September 25-October 9, 2014 and February 10-March 6, 2015 - Teens - CSV.csv"
 
-# archive(here("raw_data/September-25-October-9-2014-and-February-10-March-6-2015-Teens.zip"))
+archive(here("raw_data/September-25-October-9-2014-and-February-10-March-6-2015-Teens.zip"))
 
 # This zip file also has 5 datasets
 # The one we want is "March 7-April 10, 2018 - Teens and Tech Survey - CSV.csv"
 
-# archive(here("raw_data/March-7-April-10-2018-Teens-and-Tech-Survey.zip"))
+archive(here("raw_data/March-7-April-10-2018-Teens-and-Tech-Survey.zip"))
 
 # Extract CSVs from zip files ----
 
 # archive_extract(here("raw_data/September-25-October-9-2014-and-February-10-March-6-2015-Teens.zip"), dir = here("raw_data"), files = ("September 25-October 9, 2014 and February 10-March 6, 2015 - Teens/September 25-October 9, 2014 and February 10-March 6, 2015 - Teens - CSV.csv"))
 
 # archive_extract(here("raw_data/March-7-April-10-2018-Teens-and-Tech-Survey.zip"), dir = here("raw_data"), files = ("March 7-April 10, 2018 - Teens and Tech Survey - CSV.csv"))
+
+# Extract questionnaire docs from zip files ----
+
+# Could contain metadata for CSVs? 
+
+# archive_extract(here("raw_data/September-25-October-9-2014-and-February-10-March-6-2015-Teens.zip"), dir = here("raw_data"), files = ("September 25-October 9, 2014 and February 10-March 6, 2015 - Teens/September 25-October 9, 2014 and February 10-March 6, 2015 - Teens - Questionnaire.doc"))
+
+# archive_extract(here("raw_data/March-7-April-10-2018-Teens-and-Tech-Survey.zip"), dir = here("raw_data"), files = ("March 7-April 10, 2018 - Teens and Tech Survey - Questionnaire.doc"))
 
 ```
 
