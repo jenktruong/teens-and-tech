@@ -59,4 +59,49 @@ teens_2014_2015 <- read_csv(here("raw_data/September 25-October 9, 2014 and Febr
 teens_2018 <- read_csv(here("raw_data/March 7-April 10, 2018 - Teens and Tech Survey - CSV.csv"))
 
 ```
-At first glance, these datasets seem very messy. I should visit the original data source to learn more.
+At first glance, these datasets seem very messy. The 2018 dataset seems a lot cleaner though.
+
+- For the 2014-2015 dataset, assume that every column after "xprimelan" is a survey question.
+- For the 2018 dataset, assume every column after "surv_lang"  refers to a survey question.
+
+### Survey questions of interest
+
+Let's find questions that relate to owning technology and social media.
+
+Data sources: 
+
+[Pew Research Teens and Tech Survey 2014-15](https://www.pewresearch.org/internet/dataset/september-2014-march-2015-teens/) 
+
+[Pew Research Teens and Tech Survey 2018](https://www.pewresearch.org/internet/dataset/teens-and-tech-survey-2018/)
+
+#### 2014-2015
+
+If the answers are letters, each answer is a column and each data point is in binary (usually). These questions also seemed to be answered by parents.
+
+Question | Answers | Definition
+-------- | ------- | ---------
+P1 | a, b, c, d, e | What tech do you own
+P2 | a, b, c, d | Activities on internet
+P7 | a, b, c | what social media does the teen use?
+P8 | NA | friends with teen on FB?
+P9 | NA | follow teen on Twitter?
+P10 | NA | connected with teen on social media
+P11 | NA | how to contact teen
+P12 | a, b, c | know passwords for teen's social media
+P13 | a, b, c, d, e | use parental controls to restrict social media
+P14 | f, g, h | use parental controls to track activity
+P15 | a, b, c, d, e | lecture teens about social media dangers
+
+#### 2018
+
+Let's try to find similar questions for the 2018 survey. These questions seemed to be answered by teens.
+
+Question | Answers | Definition
+-------- | ------- | ----------
+DEVICE   | a, b, c, d | Have or have access to device
+INTREQ   | NA | how often does teen use internet
+SNS1     | 1, 2, 3, 4, 5, 6, 7, 8 | use any social media website
+SNS2     | NA | which social media is used most often
+SOC1     | NA | effect of social media on teens
+
+The next step would be to filter the datasets so that they would only contain our columns of interest.
