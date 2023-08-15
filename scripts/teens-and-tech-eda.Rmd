@@ -110,3 +110,15 @@ SNS2     | NA | which social media is used most often
 SOC1     | NA | effect of social media on teens
 
 The next step would be to filter the datasets so that they would only contain our columns of interest.
+
+```{r}
+
+```
+
+## Look for missing values
+ 
+## Look for duplicate values
+
+## Look at data distribution
+
+- Using histogram, box plots, correlation matrices?
