@@ -143,7 +143,25 @@ teens_1415_filter <- teens_2014_2015 %>%
          p14_f, p14_g, p14_h,
          p15_a, p15_b, p15_c, p15_d, p15_e)
 
-# Will need to write down definitions of what these letters and values mean
+# View classes of columns
+sapply(teens_1415_filter, class)
+
+# case_id is supposed to be numeric, but I think I know why it's character instead - some of the values are characters instead of numbers
+unique(teens_1415_filter$case_id)
+
+# Save value for how many characters should be in case_id instead 
+# most IDs range from 1 to 4 characters
+str_length(teens_1415_filter$case_id)
+max_id_length = 4
+
+# Find rows containing these non-numeric values for case_id 
+# There are three records where this is the case
+teens_1415_char <- teens_1415_filter %>% 
+  filter(str_length(case_id) > max_id_length)
+
+# For the sake of simplicity, we'll remove those rows. This will decrease our sample size from 1642 to 1639, but we should have a sufficent sample size still.
+#teens_1415_filter %>% 
+  #filter(-(case_id == teens_1415_char$case_id))
 ```
 
 ```{r Filter 2018 data, echo=FALSE}
@@ -158,6 +176,9 @@ teens_18_filter <- teens_2018 %>%
          soc1a_good_6, soc1a_good_7, 
          soc1a_bad_1, soc1a_bad_2, soc1a_bad_3, soc1a_bad_4,
          soc1a_bad_5, soc1a_bad_6, soc1a_bad_7, soc1a_dk_ref)
+
+# View classes of columns
+sapply(teens_18_filter, class)
 
 ```
 
