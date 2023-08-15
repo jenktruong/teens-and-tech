@@ -16,7 +16,7 @@ library(archive) # for interacting with ZIP files
 
 ```
 
-```{r Exploring zip files with raw data}
+```{r Exploring zip files with raw data, include=FALSE}
 
 # Uncomment code lines if doing this for the first time
 
@@ -69,6 +69,8 @@ At first glance, these datasets seem very messy. The 2018 dataset seems a lot cl
 - For the 2014-2015 dataset, assume that every column after "xprimelan" is a survey question.
 - For the 2018 dataset, assume every column after "surv_lang"  refers to a survey question.
 
+As a side note, this reminded me of what our registration database looked like from the church I worked at as an administrative assistant.
+
 ### Survey questions of interest
 
 Let's find questions that relate to owning technology and social media.
@@ -80,6 +82,8 @@ Data sources:
 [Pew Research Teens and Tech Survey 2018](https://www.pewresearch.org/internet/dataset/teens-and-tech-survey-2018/)
 
 #### 2014-2015
+
+Primary Key: CaseID
 
 If the answers are letters, each answer is a column and each data point is in binary (usually). These questions also seemed to be answered by parents.
 
@@ -98,6 +102,8 @@ P14 | f, g, h | use parental controls to track activity
 P15 | a, b, c, d, e | lecture teens about social media dangers
 
 #### 2018
+
+Primary Key: CASEID
 
 Let's try to find similar questions for the 2018 survey. These questions seemed to be answered by teens.
 
@@ -126,6 +132,18 @@ The next step would be to filter the datasets so that they would only contain ou
 
 ```{r Filter 2014-15 data, echo=FALSE}
 
+teens_1415_filter <- teens_2014_2015 %>% 
+  clean_names() %>% 
+  select(case_id, p1_a, p1_b, p1_c, p1_d, p1_e,
+         p2_a, p2_b, p2_c, p2_d,
+         p7_a, p7_b, p7_c,
+         p8, p9, p10, p10_1, p11, p11_5,
+         p12_a, p12_b, p12_c,
+         p13_a, p13_b, p13_c, p13_d, p13_e,
+         p14_f, p14_g, p14_h,
+         p15_a, p15_b, p15_c, p15_d, p15_e)
+
+# Will need to write down definitions of what these letters and values mean
 ```
 
 ## Look for missing values
