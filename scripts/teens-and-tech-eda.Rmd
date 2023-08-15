@@ -109,9 +109,22 @@ SNS1     | 1, 2, 3, 4, 5, 6, 7, 8 | use any social media website
 SNS2     | NA | which social media is used most often
 SOC1     | NA | effect of social media on teens
 
+## Key Questions
+
+Seems like I can come up with some key questions.
+
+For the 2014-2015 data:
+- What is the relationship between teens' access to devices and using social media?
+- How do parents' involvement with their teens' social media affect their usage.
+
+For the 2018 data:
+- What is the relationship between teens' access to devices and using social media?
+- What is the most used social media platform at the time?
+- What is the relationship between teens' social media usage and their effect?
+
 The next step would be to filter the datasets so that they would only contain our columns of interest.
 
-```{r}
+```{r Filter 2014-15 data, echo=FALSE}
 
 ```
 
