@@ -146,6 +146,21 @@ teens_1415_filter <- teens_2014_2015 %>%
 # Will need to write down definitions of what these letters and values mean
 ```
 
+```{r Filter 2018 data, echo=FALSE}
+
+teens_18_filter <- teens_2018 %>% 
+  clean_names() %>% 
+  select(caseid, device, devicea, deviceb, devicec, deviced,
+         intreq, sns1_1, sns1_2, sns1_3, sns1_4, 
+         sns1_5, sns1_6, sns1_7, sns1_8,
+         sns2, soc1, soc1a_good_1, soc1a_good_2,
+         soc1a_good_3, soc1a_good_4, soc1a_good_5,
+         soc1a_good_6, soc1a_good_7, 
+         soc1a_bad_1, soc1a_bad_2, soc1a_bad_3, soc1a_bad_4,
+         soc1a_bad_5, soc1a_bad_6, soc1a_bad_7, soc1a_dk_ref)
+
+```
+
 ## Look for missing values
  
 ## Look for duplicate values
