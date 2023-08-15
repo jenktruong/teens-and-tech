@@ -1,24 +1,28 @@
 # Summer Data Challenge 2023
+From Dana Daskalova
 
-Hello, data analysts!
+## Intro
 
-You are about to participate in a month-long data analysis challenge.
+The datasets come from the Pew Research Center and their surveys on teens, social media, and technology. One dataset came from 2014-2015, while another came from 2018.
 
-Your task is to work on the data sets in this repo, on which you'll need to perform data cleaning and analysis.
+## Plan
+
+### Tech Stack
+
+- R (for data exploration and analysis)
+- SQL (for data cleaning and transformation)
+- Tableau (for data visualization)
+
+### Steps
+
+1. Data Exploration and finding key questions
+2. Find patterns during data exploration
+3. Clean data (by removing duplicates or dealing with missing values)
+4. Conduct hypothesis testing
+5. Use any outputs to upload to Tableau for data vizualation
 
 ### The final output:
 Develop a comprehensive Tableau data dashboard that encapsulates your findings and the insights you derive.
-
-The analysis tool choice is left to you - you can got for anything you work best with. 
-
-Additionally, part of this task involves creating a GitHub repository. This repository will be an organized record of your work, including all your coded scripts, necessary documents, comprehensive reports, and any data visualizations you've created during the analysis process.
-
-This challenge provides an opportunity to showcase your skills and deepen your understanding of data analysis.
-
-Let's begin the work, and good luck with the data sets!
-
-Your challenge starts today.
-
 
 Data Source: 
 
