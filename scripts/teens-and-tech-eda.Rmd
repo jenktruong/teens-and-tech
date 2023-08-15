@@ -183,9 +183,34 @@ sapply(teens_18_filter, class)
 ```
 
 ## Look for missing values
- 
+
+```{r Find missing data for 2014-15 data}
+# Load package for missing data
+library(naniar)
+```
+
+```{r Find missing data for 2018 data}
+
+```
+
 ## Look for duplicate values
+```{r Find duplicates for 2014-15 data}
+# get_dupes()
+```
+
+```{r Find duplicates for 2018 data}
+
+```
 
 ## Look at data distribution
 
 - Using histogram, box plots, correlation matrices?
+
+```{r View data distribution of 14-15 data}
+
+```
+
+```{r View data distribution of 2018 data}
+
+```
+
